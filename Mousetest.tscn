@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://88v26yjkvqmx"]
+
+[ext_resource type="PackedScene" uid="uid://qvecpdtp2702" path="res://Characters/mouse.tscn" id="1_ho7y0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xls3"]
+size = Vector2(105.804, 1079)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpyfs"]
+size = Vector2(1703, 102.791)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfb05"]
+size = Vector2(1706, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hglg7"]
+size = Vector2(109, 1081)
+
+[node name="Mousetest" type="Node2D"]
+
+[node name="Mouse" parent="." instance=ExtResource("1_ho7y0")]
+position = Vector2(940, 529)
+scale = Vector2(10, 10)
+
+[node name="Walls" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(56.0982, 540.5)
+shape = SubResource("RectangleShape2D_5xls3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(963.5, 1028.4)
+shape = SubResource("RectangleShape2D_tpyfs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(962, 40)
+shape = SubResource("RectangleShape2D_pfb05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1867.5, 538.5)
+shape = SubResource("RectangleShape2D_hglg7")
+
+[connection signal="body_entered" from="Walls" to="Mouse" method="_on_walls_body_entered"]
