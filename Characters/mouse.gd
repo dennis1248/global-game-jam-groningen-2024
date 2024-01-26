@@ -5,7 +5,7 @@ var my_random_number: int
 var has_bounced: bool = false
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not has_bounced: 
 		if my_random_number == 0:
 			velocity.x = 300
@@ -31,7 +31,7 @@ func _on_walktimer_timeout():
 	var rng = RandomNumberGenerator.new()
 	my_random_number = rng.randi_range(0, 3)
 	 
-func _on_walls_body_entered(body):
+func _on_walls_body_entered(_body):
 	%Bouncetimer.start() 
 	
 	if not has_bounced: 
