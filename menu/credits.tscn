@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dixwsqfskeo0n"]
+[gd_scene load_steps=10 format=3 uid="uid://dixwsqfskeo0n"]
 
 [ext_resource type="Script" path="res://menu/credits.gd" id="1_7bgp8"]
 [ext_resource type="Texture2D" uid="uid://yet83janwr3i" path="res://art/cats/ProfilepictureCat_Angela.png" id="2_ulqr4"]
+[ext_resource type="FontFile" uid="uid://dg4h0axpdii5x" path="res://fonts/pixely[1].ttf" id="2_wrl60"]
 [ext_resource type="Texture2D" uid="uid://31ij56g378x6" path="res://art/cats/ProfilepictureCat_Damian.png" id="3_ty4pp"]
 [ext_resource type="Texture2D" uid="uid://cu763atlnvk5r" path="res://art/cats/ProfilepictureCat_Dennis.png" id="4_c2x3a"]
 [ext_resource type="Texture2D" uid="uid://cxj06tn5vwe41" path="res://art/cats/ProfilepictureCat_Gideon.png" id="5_dsiku"]
@@ -18,12 +19,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7bgp8")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1079.0
+color = Color(0.145098, 0.145098, 0.145098, 1)
+
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 142.0
 offset_right = 1164.0
 offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
 text = "Completely Unhinged Productions proudly presents..."
 
@@ -33,6 +41,7 @@ offset_left = 895.0
 offset_top = 230.0
 offset_right = 1365.0
 offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 55
 text = "Yapping Dungeon
 "
@@ -48,88 +57,131 @@ vertical = true
 
 [node name="Label" type="Label" parent="BoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
 text = "Made by...
 
 "
 
 [node name="Label10" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Angela Boonstra"
+text = "Angela Boonstra
+Prop Artist"
 
 [node name="Label5" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Damian Wijnsema"
+text = "Damian Wijnsema
+Sound Engineer "
 
 [node name="Label4" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Dennis ten Hoove"
+text = "Dennis ten Hoove
+Lead Development"
 
 [node name="Label8" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Gideon Rol"
+text = "Gideon Rol
+Environment Artist"
 
 [node name="Label7" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Lucy Leegte"
+text = "Lucy Leegte
+Prop Artist"
 
 [node name="Label6" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Mandy Meesters"
+text = "Mandy Meesters
+Character Artist"
 
 [node name="Label9" type="Label" parent="BoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrl60")
 theme_override_font_sizes/font_size = 40
-text = "Tyler van Dijk"
+text = "Tyler van Dijk
+Developer"
 
 [node name="Angela" type="Sprite2D" parent="BoxContainer"]
+unique_name_in_owner = true
 position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("2_ulqr4")
 
 [node name="Damian" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 250)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("3_ty4pp")
 
 [node name="Dennis" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 338)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("4_c2x3a")
 
 [node name="Gideon" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 421)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("5_dsiku")
 
 [node name="Lucy" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 503)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("6_sl2vd")
 
 [node name="Mandy" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 585)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("7_mjjid")
 
 [node name="Tyler" type="Sprite2D" parent="BoxContainer"]
-position = Vector2(-50, 674)
+unique_name_in_owner = true
+visible = false
+position = Vector2(-50, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("8_7r3vg")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 12.0
 one_shot = true
 autostart = true
 
 [node name="LoopThroughCredits" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 2.0
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="LoopThroughCredits" to="." method="_on_loop_through_credits_timeout"]
