@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvlbl6rk2m2rc"]
+
+[ext_resource type="Texture2D" uid="uid://dp0ayaky808nw" path="res://art/props/Fish in a barrel.png" id="1_bramx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csjj5"]
+size = Vector2(37, 48)
+
+[node name="FishBarrol" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -8)
+shape = SubResource("RectangleShape2D_csjj5")
+
+[node name="FishInABarrel" type="Sprite2D" parent="."]
+position = Vector2(-2, -6)
+texture = ExtResource("1_bramx")
