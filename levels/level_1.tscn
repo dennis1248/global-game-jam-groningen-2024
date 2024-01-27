@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkne6buo5082c"]
+[gd_scene load_steps=11 format=3 uid="uid://bkne6buo5082c"]
 
-[ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/Tilemap/Tile map dungen lv 1.png" id="1_ajkkg"]
-[ext_resource type="Texture2D" uid="uid://cjbavb0kvdpfi" path="res://art/Props/Stairs.png" id="2_d7ryd"]
-[ext_resource type="PackedScene" uid="uid://qvecpdtp2702" path="res://Characters/mouse.tscn" id="3_57ymr"]
-[ext_resource type="Texture2D" uid="uid://cmdueo7aexuj" path="res://fire_torch_animated_texture.tres" id="4_7g3rc"]
+[ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_ajkkg"]
+[ext_resource type="Texture2D" uid="uid://cjbavb0kvdpfi" path="res://art/props/stairs.png" id="2_d7ryd"]
+[ext_resource type="PackedScene" uid="uid://qvecpdtp2702" path="res://mobs/mouse.tscn" id="3_57ymr"]
+[ext_resource type="Texture2D" uid="uid://cmdueo7aexuj" path="res://art/props/torch.tres" id="4_7g3rc"]
 [ext_resource type="PackedScene" uid="uid://duodbpt6jexph" path="res://player/player.tscn" id="5_ft541"]
-[ext_resource type="PackedScene" uid="uid://bu1nyvm5syca8" path="res://Props/Stoel.tscn" id="6_mrksw"]
+[ext_resource type="PackedScene" uid="uid://b5clu3wqqg78h" path="res://props/piano_button_low.tscn" id="6_tjf5d"]
+[ext_resource type="PackedScene" uid="uid://b4nlen6efrjy1" path="res://props/piano_button_mid.tscn" id="7_2dydb"]
+[ext_resource type="PackedScene" uid="uid://uackdqpc6ds" path="res://props/piano_button_high.tscn" id="8_xihf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b53w"]
 texture = ExtResource("1_ajkkg")
@@ -383,7 +385,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1b53w")
 
-[node name="LV 1" type="Node2D"]
+[node name="level_1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kkibn")
@@ -408,5 +410,11 @@ texture = ExtResource("4_7g3rc")
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_ft541")]
 position = Vector2(96, -64)
 
-[node name="Stoel" parent="." instance=ExtResource("6_mrksw")]
-position = Vector2(-112, -8)
+[node name="PianoButton" parent="." instance=ExtResource("6_tjf5d")]
+position = Vector2(-102, 54)
+
+[node name="PianoButton2" parent="." instance=ExtResource("7_2dydb")]
+position = Vector2(-26, 53)
+
+[node name="PianoButton3" parent="." instance=ExtResource("8_xihf1")]
+position = Vector2(48, 52)

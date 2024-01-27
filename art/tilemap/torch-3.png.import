@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjbavb0kvdpfi"
-path="res://.godot/imported/Stairs.png-4592baf329bbf7fb74c7f5a6e7d1850e.ctex"
+uid="uid://dlvm38j5cxkmg"
+path="res://.godot/imported/torch-3.png-4c9b2c716343bd0f5c01e55ebe2ef91d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Stairs.png"
-dest_files=["res://.godot/imported/Stairs.png-4592baf329bbf7fb74c7f5a6e7d1850e.ctex"]
+source_file="res://art/tilemap/torch-3.png"
+dest_files=["res://.godot/imported/torch-3.png-4c9b2c716343bd0f5c01e55ebe2ef91d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d24ps6ytlv1b7"
-path="res://.godot/imported/Table.png-582e9e8ed227d2c65024fc5a62baa106.ctex"
+uid="uid://byrb8gs5s2u4"
+path="res://.godot/imported/pianotile_2.png-1ffddc0d9fac711396f2ba448c981c39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Table.png"
-dest_files=["res://.godot/imported/Table.png-582e9e8ed227d2c65024fc5a62baa106.ctex"]
+source_file="res://art/props/pianotile_2.png"
+dest_files=["res://.godot/imported/pianotile_2.png-1ffddc0d9fac711396f2ba448c981c39.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2m5dg1ygxky7"
-path="res://.godot/imported/Trapdoor.png-42864d7cbbbc787b868759f420b3424f.ctex"
+uid="uid://d24ps6ytlv1b7"
+path="res://.godot/imported/Table.png-277c4e636745f2eeb63715e0e033e964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Trapdoor.png"
-dest_files=["res://.godot/imported/Trapdoor.png-42864d7cbbbc787b868759f420b3424f.ctex"]
+source_file="res://art/props/Table.png"
+dest_files=["res://.godot/imported/Table.png-277c4e636745f2eeb63715e0e033e964.ctex"]
 
 [params]
 

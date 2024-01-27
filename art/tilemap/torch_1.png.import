@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brhveuimfxsok"
-path="res://.godot/imported/Pianotile-0001.png-258ab609fb8aa57a0f4679e1ba2d7725.ctex"
+uid="uid://dp3wup3i4ewlf"
+path="res://.godot/imported/torch_1.png-e692556c7e645aa41adcb450e3c3747f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Pianotile-0001.png"
-dest_files=["res://.godot/imported/Pianotile-0001.png-258ab609fb8aa57a0f4679e1ba2d7725.ctex"]
+source_file="res://art/tilemap/torch_1.png"
+dest_files=["res://.godot/imported/torch_1.png-e692556c7e645aa41adcb450e3c3747f.ctex"]
 
 [params]
 

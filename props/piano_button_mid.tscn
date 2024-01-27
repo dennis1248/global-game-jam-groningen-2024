@@ -1,22 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4nlen6efrjy1"]
 
 [ext_resource type="Script" path="res://props/piano_button.gd" id="1_un668"]
-[ext_resource type="Texture2D" uid="uid://cldu5sbyou35w" path="res://icon.svg" id="2_2678j"]
+[ext_resource type="Texture2D" uid="uid://byrb8gs5s2u4" path="res://art/props/pianotile_2.png" id="2_18pdq"]
 [ext_resource type="AudioStream" uid="uid://c7yl1w45x885" path="res://audio/tune_mid.mp3" id="3_qfbn0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ao1w6"]
-radius = 56.0357
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_net8k"]
+size = Vector2(32, 32)
 
 [node name="PianoButton" type="Area2D"]
 script = ExtResource("1_un668")
 
-[node name="PianoButton" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, -2.38419e-07)
-scale = Vector2(0.220848, 0.220848)
-texture = ExtResource("2_2678j")
+[node name="Pianotile2" type="Sprite2D" parent="."]
+texture = ExtResource("2_18pdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_ao1w6")
+shape = SubResource("RectangleShape2D_net8k")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_qfbn0")

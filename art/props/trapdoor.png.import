@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b83456wqmvgv0"
-path="res://.godot/imported/Pianotile-0003.png-a72a051ab1b05bcfd09f37d4b916478d.ctex"
+uid="uid://2m5dg1ygxky7"
+path="res://.godot/imported/trapdoor.png-13f7cd0707bc975743226a62b6193779.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Pianotile-0003.png"
-dest_files=["res://.godot/imported/Pianotile-0003.png-a72a051ab1b05bcfd09f37d4b916478d.ctex"]
+source_file="res://art/props/trapdoor.png"
+dest_files=["res://.godot/imported/trapdoor.png-13f7cd0707bc975743226a62b6193779.ctex"]
 
 [params]
 

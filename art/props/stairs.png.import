@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba3kt8mhv647g"
-path="res://.godot/imported/Tile map dungen lv 1.png-f9b3736b39f2a3bde64133a8d3a1778c.ctex"
+uid="uid://cjbavb0kvdpfi"
+path="res://.godot/imported/stairs.png-b9614a7051bf245ae1a91e53e2737171.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Tilemap/Tile map dungen lv 1.png"
-dest_files=["res://.godot/imported/Tile map dungen lv 1.png-f9b3736b39f2a3bde64133a8d3a1778c.ctex"]
+source_file="res://art/props/stairs.png"
+dest_files=["res://.godot/imported/stairs.png-b9614a7051bf245ae1a91e53e2737171.ctex"]
 
 [params]
 
