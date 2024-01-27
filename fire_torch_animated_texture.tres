@@ -1,0 +1,17 @@
+[gd_resource type="AnimatedTexture" load_steps=5 format=3 uid="uid://cmdueo7aexuj"]
+
+[ext_resource type="Texture2D" uid="uid://dp3wup3i4ewlf" path="res://art/Sprite fire torch-0001.png" id="1_ymcwa"]
+[ext_resource type="Texture2D" uid="uid://ddcji0vvtypng" path="res://art/Sprite fire torch-0002.png" id="2_w2udm"]
+[ext_resource type="Texture2D" uid="uid://dlvm38j5cxkmg" path="res://art/Sprite fire torch-0003.png" id="3_w1tcu"]
+[ext_resource type="Texture2D" uid="uid://ds3rbydrwiwb6" path="res://art/Sprite fire torch-0004.png" id="4_mr5m3"]
+
+[resource]
+frames = 4
+frame_0/texture = ExtResource("1_ymcwa")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("2_w2udm")
+frame_1/duration = 0.84
+frame_2/texture = ExtResource("3_w1tcu")
+frame_2/duration = 0.52
+frame_3/texture = ExtResource("4_mr5m3")
+frame_3/duration = 0.84
