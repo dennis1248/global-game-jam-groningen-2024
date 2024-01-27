@@ -31,17 +31,26 @@ func _on_walktimer_timeout():
 	var rng = RandomNumberGenerator.new()
 	my_random_number = rng.randi_range(0, 3)
 	 
-func _on_walls_body_entered(_body):
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("walls"):
+			%Bouncetimer.start() 
+			if not has_bounced: 
+				velocity.y *= -1
+				velocity.x *= -1
+				var rng = RandomNumberGenerator.new()
+				my_random_number = rng.randi_range(0, 3)
+				has_bounced = true; 
+				
+				
+func _on_bouncetimer_timeout():
+		has_bounced = false
+
+
+func _on_mouse_area_area_entered(area):
 	%Bouncetimer.start() 
-	
 	if not has_bounced: 
 		velocity.y *= -1
 		velocity.x *= -1
-		
 		var rng = RandomNumberGenerator.new()
 		my_random_number = rng.randi_range(0, 3)
-	
-	has_bounced = true; 
-
-func _on_bouncetimer_timeout():
-	has_bounced = false
+		has_bounced = true; 

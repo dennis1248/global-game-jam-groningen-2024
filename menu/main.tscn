@@ -1,6 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce2jf512lbaas"]
+[gd_scene load_steps=16 format=3 uid="uid://ce2jf512lbaas"]
 
 [ext_resource type="Script" path="res://menu/main.gd" id="1_yco6t"]
+[ext_resource type="FontFile" uid="uid://dg4h0axpdii5x" path="res://fonts/pixely[1].ttf" id="2_ijk07"]
+[ext_resource type="Texture2D" uid="uid://b0awtw3vsd17r" path="res://art/scenes/Menuscreen.png" id="3_phbd8"]
+[ext_resource type="PackedScene" uid="uid://qvecpdtp2702" path="res://mobs/mouse.tscn" id="4_0o1ki"]
+[ext_resource type="PackedScene" uid="uid://c4sxrpvfju541" path="res://props/cat_idle.tscn" id="5_mynds"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_045j1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vccr8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulqe3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhffd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqigb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfprr"]
+size = Vector2(1006, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj8oi"]
+size = Vector2(1004, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yx0r"]
+size = Vector2(81, 442)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mg7x"]
+size = Vector2(79.25, 441)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lr3di"]
+radius = 50.0
+height = 230.0
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -11,39 +41,122 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yco6t")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 917.0
+offset_bottom = 1080.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 76.0
-offset_top = 833.0
-offset_right = 487.0
-offset_bottom = 1004.0
+offset_left = 14.0
+offset_top = 654.0
+offset_right = 425.0
+offset_bottom = 976.0
+theme_override_constants/separation = 30
 
 [node name="Level1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ijk07")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_045j1")
 text = "Level 1"
 
 [node name="Level2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ijk07")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vccr8")
 text = "Level 2"
 
 [node name="Level3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ijk07")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ulqe3")
 text = "Level 3"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ijk07")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lhffd")
 text = "Credits"
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="."]
 layout_mode = 2
+offset_left = 10.0
+offset_top = 950.0
+offset_right = 421.0
+offset_bottom = 992.0
+theme_override_fonts/font = ExtResource("2_ijk07")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uqigb")
 text = "Exit"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_phbd8")
+
+[node name="Yapping" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 3.0
+offset_right = 829.0
+offset_bottom = 178.0
+theme_override_fonts/normal_font = ExtResource("2_ijk07")
+theme_override_font_sizes/normal_font_size = 128
+text = "Yapping
+"
+
+[node name="Dungeon" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 134.0
+offset_right = 880.0
+offset_bottom = 322.0
+theme_override_fonts/normal_font = ExtResource("2_ijk07")
+theme_override_font_sizes/normal_font_size = 128
+text = "Dungeon
+"
+
+[node name="MouseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(1412, 936.5)
+shape = SubResource("RectangleShape2D_jfprr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(1413, 509)
+shape = SubResource("RectangleShape2D_oj8oi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(953.5, 724)
+shape = SubResource("RectangleShape2D_2yx0r")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(1845.63, 719.5)
+shape = SubResource("RectangleShape2D_1mg7x")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="MouseArea"]
+position = Vector2(1044, 842)
+shape = SubResource("CapsuleShape2D_lr3di")
+
+[node name="Mouse" parent="." instance=ExtResource("4_0o1ki")]
+position = Vector2(1307, 735)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" parent="." instance=ExtResource("5_mynds")]
+position = Vector2(1269, 388)
+scale = Vector2(3, 3)
+
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="area_entered" from="MouseArea" to="Mouse" method="_on_mouse_area_area_entered"]

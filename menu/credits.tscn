@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dixwsqfskeo0n"]
+[gd_scene load_steps=9 format=3 uid="uid://dixwsqfskeo0n"]
 
 [ext_resource type="Script" path="res://menu/credits.gd" id="1_7bgp8"]
+[ext_resource type="Texture2D" uid="uid://yet83janwr3i" path="res://art/cats/ProfilepictureCat_Angela.png" id="2_ulqr4"]
+[ext_resource type="Texture2D" uid="uid://31ij56g378x6" path="res://art/cats/ProfilepictureCat_Damian.png" id="3_ty4pp"]
+[ext_resource type="Texture2D" uid="uid://cu763atlnvk5r" path="res://art/cats/ProfilepictureCat_Dennis.png" id="4_c2x3a"]
+[ext_resource type="Texture2D" uid="uid://cxj06tn5vwe41" path="res://art/cats/ProfilepictureCat_Gideon.png" id="5_dsiku"]
+[ext_resource type="Texture2D" uid="uid://dvyhf8vsjine8" path="res://art/cats/ProfilepictureCat_Lucy.png" id="6_sl2vd"]
+[ext_resource type="Texture2D" uid="uid://cypo3av1bikmr" path="res://art/cats/ProfilepictureCat_Mandy.png" id="7_mjjid"]
+[ext_resource type="Texture2D" uid="uid://cuqwlpfcwdgqj" path="res://art/cats/ProfilepictureCat_tyler.png" id="8_7r3vg"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -33,9 +40,10 @@ text = "Yapping Dungeon
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
 offset_left = 774.0
-offset_top = 410.0
+offset_top = 350.0
 offset_right = 1458.0
-offset_bottom = 759.0
+offset_bottom = 1058.0
+theme_override_constants/separation = 30
 vertical = true
 
 [node name="Label" type="Label" parent="BoxContainer"]
@@ -80,9 +88,48 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Tyler van Dijk"
 
+[node name="Angela" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 160)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ulqr4")
+
+[node name="Damian" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 250)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ty4pp")
+
+[node name="Dennis" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 338)
+scale = Vector2(2, 2)
+texture = ExtResource("4_c2x3a")
+
+[node name="Gideon" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 421)
+scale = Vector2(2, 2)
+texture = ExtResource("5_dsiku")
+
+[node name="Lucy" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 503)
+scale = Vector2(2, 2)
+texture = ExtResource("6_sl2vd")
+
+[node name="Mandy" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 585)
+scale = Vector2(2, 2)
+texture = ExtResource("7_mjjid")
+
+[node name="Tyler" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(-50, 674)
+scale = Vector2(2, 2)
+texture = ExtResource("8_7r3vg")
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0
 one_shot = true
 autostart = true
 
+[node name="LoopThroughCredits" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="LoopThroughCredits" to="." method="_on_loop_through_credits_timeout"]
