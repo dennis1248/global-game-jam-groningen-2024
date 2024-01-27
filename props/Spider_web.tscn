@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj6wmas6wwq64"]
+
+[ext_resource type="Texture2D" uid="uid://be0586es1lywi" path="res://art/props/Spiderweb.png" id="1_25uib"]
+
+[node name="SpiderWeb" type="StaticBody2D"]
+
+[node name="Spiderweb" type="Sprite2D" parent="."]
+texture = ExtResource("1_25uib")

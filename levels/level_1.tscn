@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkne6buo5082c"]
+[gd_scene load_steps=15 format=3 uid="uid://bkne6buo5082c"]
 
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_ajkkg"]
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_mg2gs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://uackdqpc6ds" path="res://props/piano_button_high.tscn" id="8_xihf1"]
 [ext_resource type="AudioStream" uid="uid://c8xnf5q3t36tb" path="res://audio/ambiance.ogg" id="10_lxxan"]
 [ext_resource type="PackedScene" uid="uid://dbj42a85qqmcn" path="res://triggers/level_end.tscn" id="11_2o5re"]
+[ext_resource type="PackedScene" uid="uid://cj6wmas6wwq64" path="res://props/Spider_web.tscn" id="12_s0nml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b53w"]
 texture = ExtResource("1_ajkkg")
@@ -434,6 +435,13 @@ volume_db = -7.0
 [node name="LevelEnd" parent="." instance=ExtResource("11_2o5re")]
 unique_name_in_owner = true
 position = Vector2(-32, 287)
+
+[node name="SpiderWeb" parent="." instance=ExtResource("12_s0nml")]
+position = Vector2(-208, -166)
+
+[node name="SpiderWeb2" parent="." instance=ExtResource("12_s0nml")]
+position = Vector2(144, -166)
+rotation = 1.5708
 
 [connection signal="timeout" from="PianoTimer" to="." method="_on_piano_timer_timeout"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
