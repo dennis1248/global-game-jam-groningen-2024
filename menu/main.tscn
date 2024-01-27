@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://ce2jf512lbaas"]
+[gd_scene load_steps=17 format=3 uid="uid://ce2jf512lbaas"]
 
 [ext_resource type="Script" path="res://menu/main.gd" id="1_yco6t"]
 [ext_resource type="FontFile" uid="uid://dg4h0axpdii5x" path="res://fonts/pixely[1].ttf" id="2_ijk07"]
 [ext_resource type="Texture2D" uid="uid://b0awtw3vsd17r" path="res://art/scenes/Menuscreen.png" id="3_phbd8"]
 [ext_resource type="PackedScene" uid="uid://qvecpdtp2702" path="res://mobs/mouse.tscn" id="4_0o1ki"]
 [ext_resource type="PackedScene" uid="uid://c4sxrpvfju541" path="res://props/cat_idle.tscn" id="5_mynds"]
+[ext_resource type="AudioStream" uid="uid://c8xnf5q3t36tb" path="res://audio/ambiance.ogg" id="6_ce7s7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_045j1"]
 
@@ -154,9 +155,16 @@ scale = Vector2(2, 2)
 position = Vector2(1269, 388)
 scale = Vector2(3, 3)
 
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_ce7s7")
+volume_db = -10.0
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="area_entered" from="MouseArea" to="Mouse" method="_on_mouse_area_area_entered"]
+[connection signal="finished" from="Ambiance" to="." method="_on_audio_stream_player_finished"]
