@@ -1,31 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://qvecpdtp2702"]
+[gd_scene load_steps=5 format=3 uid="uid://qvecpdtp2702"]
 
 [ext_resource type="Script" path="res://mobs/mouse.gd" id="1_0m8hl"]
 [ext_resource type="Texture2D" uid="uid://45kkk5p4sok4" path="res://art/mobs/Mouse.png" id="2_dcqn2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hd03"]
-radius = 9.0
+radius = 29.4279
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x6iru"]
+radius = 23.0217
 
 [node name="Mouse" type="CharacterBody2D"]
 script = ExtResource("1_0m8hl")
 
 [node name="MouseSprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1, -1)
 texture = ExtResource("2_dcqn2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -2)
 shape = SubResource("CircleShape2D_4hd03")
+disabled = true
 
 [node name="Bouncetimer" type="Timer" parent="."]
 unique_name_in_owner = true
+wait_time = 0.1
 one_shot = true
 
 [node name="Walktimer" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_x6iru")
+
 [connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
 [connection signal="timeout" from="Bouncetimer" to="." method="_on_bouncetimer_timeout"]
 [connection signal="timeout" from="Walktimer" to="." method="_on_walktimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
