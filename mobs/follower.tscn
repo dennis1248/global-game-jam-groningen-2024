@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b34hprofhpj7r"]
+
+[ext_resource type="Script" path="res://mobs/follower.gd" id="1_nan75"]
+[ext_resource type="Texture2D" uid="uid://cuqwlpfcwdgqj" path="res://art/cats/ProfilepictureCat_tyler.png" id="2_xgmqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ixtd"]
+radius = 21.587
+
+[node name="Follower" type="CharacterBody2D"]
+position = Vector2(942, 552)
+floor_block_on_wall = false
+script = ExtResource("1_nan75")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_xgmqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2ixtd")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

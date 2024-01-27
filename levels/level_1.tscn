@@ -420,7 +420,7 @@ position = Vector2(-26, -24)
 [node name="PianoButton3" parent="." instance=ExtResource("8_xihf1")]
 position = Vector2(55, -23)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("5_ft541")]
+[node name="Player" parent="." instance=ExtResource("5_ft541")]
 position = Vector2(-32, 211)
 
 [node name="PianoTimer" type="Timer" parent="."]
