@@ -22,6 +22,9 @@ func _physics_process(delta):
 
 	position = position.move_toward(Vector2(x, y), delta * SPEED)
 	
-	
 
 	move_and_slide()
+
+func _on_timer_timeout():
+	%Timer.wait_time = randi() % 15 + 5
+	$AudioStreamPlayer.play()

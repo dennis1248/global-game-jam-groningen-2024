@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b34hprofhpj7r"]
+[gd_scene load_steps=5 format=3 uid="uid://b34hprofhpj7r"]
 
 [ext_resource type="Script" path="res://mobs/follower.gd" id="1_nan75"]
 [ext_resource type="Texture2D" uid="uid://cuqwlpfcwdgqj" path="res://art/cats/ProfilepictureCat_tyler.png" id="2_xgmqq"]
+[ext_resource type="AudioStream" uid="uid://dc32qbqwbqat" path="res://audio/woef.ogg" id="3_ip63g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ixtd"]
 radius = 21.587
@@ -21,7 +22,11 @@ disabled = true
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 5.0
+wait_time = 10.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ip63g")
+volume_db = -5.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
