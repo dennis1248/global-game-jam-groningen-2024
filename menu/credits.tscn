@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://dixwsqfskeo0n"]
+
+[ext_resource type="Script" path="res://menu/credits.gd" id="1_7bgp8"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7bgp8")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 142.0
+offset_right = 1164.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 40
+text = "Completely Unhinged Productions proudly presents..."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 895.0
+offset_top = 230.0
+offset_right = 1365.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 55
+text = "Yapping Dungeon
+"
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 410.0
+offset_right = 1458.0
+offset_bottom = 759.0
+vertical = true
+
+[node name="Label" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Made by...
+
+"
+
+[node name="Label10" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Angela Boonstra"
+
+[node name="Label5" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Damian Wijnsema"
+
+[node name="Label4" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Dennis ten Hoove"
+
+[node name="Label8" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Gideon Rol"
+
+[node name="Label7" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Lucy Leegte"
+
+[node name="Label6" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Mandy Meesters"
+
+[node name="Label9" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Tyler van Dijk"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
