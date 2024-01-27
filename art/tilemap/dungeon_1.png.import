@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byrb8gs5s2u4"
-path="res://.godot/imported/Pianotile-0002.png-bd2b443dc0598e29cfdb6a37f98d58da.ctex"
+uid="uid://ba3kt8mhv647g"
+path="res://.godot/imported/dungeon_1.png-a92d7f0c4aca14caaeb9e7d54b481071.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Props/Pianotile-0002.png"
-dest_files=["res://.godot/imported/Pianotile-0002.png-bd2b443dc0598e29cfdb6a37f98d58da.ctex"]
+source_file="res://art/tilemap/dungeon_1.png"
+dest_files=["res://.godot/imported/dungeon_1.png-a92d7f0c4aca14caaeb9e7d54b481071.ctex"]
 
 [params]
 

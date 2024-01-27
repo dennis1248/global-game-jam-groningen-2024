@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcji0vvtypng"
-path="res://.godot/imported/Sprite fire torch-0002.png-83b9b2f586bad9ff98697276182f2eb8.ctex"
+uid="uid://ds3rbydrwiwb6"
+path="res://.godot/imported/torch_4.png-a63c053b010a88567b604da291acacb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Tilemap/Sprite fire torch-0002.png"
-dest_files=["res://.godot/imported/Sprite fire torch-0002.png-83b9b2f586bad9ff98697276182f2eb8.ctex"]
+source_file="res://art/tilemap/torch_4.png"
+dest_files=["res://.godot/imported/torch_4.png-a63c053b010a88567b604da291acacb7.ctex"]
 
 [params]
 

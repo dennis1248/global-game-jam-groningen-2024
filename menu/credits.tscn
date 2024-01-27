@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_7bgp8")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 142.0
 offset_top = 142.0
 offset_right = 1164.0
@@ -20,6 +21,7 @@ theme_override_font_sizes/font_size = 40
 text = "Completely Unhinged Productions proudly presents..."
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 895.0
 offset_top = 230.0
 offset_right = 1365.0
