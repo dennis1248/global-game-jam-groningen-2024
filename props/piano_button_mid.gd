@@ -4,7 +4,7 @@ extends Area2D
 
 func _on_body_entered(body):
 	$AudioplayerMid.play()
-	self.modulate = Color(1.0, 0.0, 0.0, 1.0)
+	self.modulate = Color(0.0, 1.0, 0.0, 1.0)
 
 func _on_audioplayer_mid_finished():
 	self.modulate = starting_color
