@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds3rbydrwiwb6"
-path="res://.godot/imported/Sprite fire torch-0004.png-860f281b2667fd7aadc8d46679f821d2.ctex"
+uid="uid://cju61jycgbwti"
+path="res://.godot/imported/Chair.png-3864248e14fbb7cd6fe2ca0599211107.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sprite fire torch-0004.png"
-dest_files=["res://.godot/imported/Sprite fire torch-0004.png-860f281b2667fd7aadc8d46679f821d2.ctex"]
+source_file="res://art/Props/Chair.png"
+dest_files=["res://.godot/imported/Chair.png-3864248e14fbb7cd6fe2ca0599211107.ctex"]
 
 [params]
 
