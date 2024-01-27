@@ -17,3 +17,5 @@ func _on_exit_pressed():
 	
 func _on_audio_stream_player_finished():
 	%Ambiance.play()
+	
+
