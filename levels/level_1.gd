@@ -8,6 +8,10 @@ func _process(delta):
 		%LevelEnd.disabled = false
 		$PianoButton/AudioStreamPlayer2D.play()
 
+func _input(event):
+	if event.is_action_pressed("escape"):
+		get_tree().change_scene_to_file("res://menu/main.tscn")
+
 func _on_piano_timer_timeout():
 	if loop_step == 0:
 		$PianoButton/AudioplayerLow.play()
