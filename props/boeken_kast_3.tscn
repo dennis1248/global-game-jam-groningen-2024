@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnuuskcgdym5b"]
+
+[ext_resource type="Texture2D" uid="uid://52eck2gbxnvs" path="res://art/props/boekenkast 3.png" id="1_u1ac1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1mi1"]
+size = Vector2(38, 45)
+
+[node name="BoekenKast3" type="StaticBody2D"]
+
+[node name="Boekenkast3" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("1_u1ac1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -22.5)
+shape = SubResource("RectangleShape2D_d1mi1")
