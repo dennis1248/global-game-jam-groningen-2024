@@ -7,9 +7,7 @@ var narrator_response: String = ""
 var narrator_lock: bool = false
 
 func _process(delta):
-	if objective_completed:
-		%LevelEnd.disabled = false
-		$PianoButton/AudioStreamPlayer2D.play()
+	pass
 
 func _input(event):
 	if event.is_action_pressed("escape"):
@@ -42,7 +40,7 @@ func _on_audio_stream_player_finished():
 func _on_piano_button_body_entered(body):
 	if pressed_button == 0:
 		pressed_button += 1
-	else:
+	elif not objective_completed:
 		narrator_response = "puzzel_fail"
 		$NarratorPauseTimer.start()
 
@@ -51,14 +49,14 @@ func _on_piano_button_2_body_entered(body):
 		pressed_button += 1
 		narrator_response = "puzzel_success"
 		$NarratorPauseTimer.start()
-	else:
+	elif not objective_completed:
 		narrator_response = "puzzel_fail"
 		$NarratorPauseTimer.start()
 
 func _on_piano_button_3_body_entered(body):
 	if pressed_button == 1:
 		pressed_button += 1
-	else:
+	elif not objective_completed:
 		narrator_response = "puzzel_fail"
 		$NarratorPauseTimer.start()
 
@@ -83,3 +81,10 @@ func _on_narrator_stream_player_finished():
 		$NarratorStreamPlayer.stream = load("res://audio/narrator/level_1_end.mp3")
 		$NarratorStreamPlayer.play()
 		narrator_response = ""
+		objective_completed = true
+		
+
+func _on_ladder_body_entered(body):
+	if objective_completed == true:
+		get_tree().change_scene_to_file("res://levels/level_2.tscn")
+	
