@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bkne6buo5082c"]
+[gd_scene load_steps=23 format=3 uid="uid://bkne6buo5082c"]
 
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_ajkkg"]
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_mg2gs"]
@@ -218,6 +218,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ndb36")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7cs0"]
+size = Vector2(36, 36)
+
 [node name="level_1" type="Node2D"]
 script = ExtResource("1_mg2gs")
 
@@ -310,6 +313,14 @@ position = Vector2(66, -139)
 [node name="FogelCage" parent="." instance=ExtResource("19_ldtvv")]
 position = Vector2(-210, 222)
 
+[node name="ladder" type="Area2D" parent="."]
+position = Vector2(-32, 286)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ladder"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_r7cs0")
+
 [connection signal="body_entered" from="PianoButton" to="." method="_on_piano_button_body_entered"]
 [connection signal="body_entered" from="PianoButton2" to="." method="_on_piano_button_2_body_entered"]
 [connection signal="body_entered" from="PianoButton3" to="." method="_on_piano_button_3_body_entered"]
@@ -317,3 +328,4 @@ position = Vector2(-210, 222)
 [connection signal="timeout" from="NarratorPauseTimer" to="." method="_on_narrator_pause_timer_timeout"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="finished" from="NarratorStreamPlayer" to="." method="_on_narrator_stream_player_finished"]
+[connection signal="body_entered" from="ladder" to="." method="_on_ladder_body_entered"]
