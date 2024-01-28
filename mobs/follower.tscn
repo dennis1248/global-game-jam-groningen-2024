@@ -63,7 +63,7 @@ frame = 1
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 10.0
+wait_time = 15.0
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

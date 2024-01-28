@@ -3,6 +3,7 @@ extends Node2D
 var keys_collected: int = 0
 var narrator_response: String = ""
 @onready var dog_cage_pos = $DogCage.position
+var unlockLadder = false
 
 func _ready():
 	narrator_response = "intro"
@@ -48,8 +49,14 @@ func _on_narrator_timer_timeout():
 	if narrator_response == "dog_saved":
 		%NarratorAudioplayer.stream = load("res://audio/narrator/level_2_dogfree.mp3")
 		%NarratorAudioplayer.play()
+		unlockLadder = true
 	
 	narrator_response = ""
 
 func _on_ambiance_finished():
 	%Ambiance.play()
+
+
+func _on_area_2d_body_entered(body):
+	if unlockLadder == true:
+		get_tree().change_scene_to_file("res://levels/level_3.tscn")

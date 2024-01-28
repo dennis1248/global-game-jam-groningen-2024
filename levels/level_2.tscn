@@ -1,23 +1,23 @@
-[gd_scene load_steps=24 format=3 uid="uid://bmpbbigrf1q2l"]
+[gd_scene load_steps=25 format=3 uid="uid://bmpbbigrf1q2l"]
 
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_2xcq7"]
 [ext_resource type="Script" path="res://levels/level_2.gd" id="1_62ntc"]
-[ext_resource type="PackedScene" path="res://props/boeken_kast2.tscn" id="3_i0kh7"]
-[ext_resource type="PackedScene" path="res://props/boeken_kast3.tscn" id="4_o5ux4"]
-[ext_resource type="PackedScene" path="res://props/fogel_cage.tscn" id="5_u6w55"]
+[ext_resource type="PackedScene" uid="uid://b4qfp7n16va8d" path="res://props/boeken_kast2.tscn" id="3_i0kh7"]
+[ext_resource type="PackedScene" uid="uid://ypbunar1g3jl" path="res://props/boeken_kast3.tscn" id="4_o5ux4"]
+[ext_resource type="PackedScene" uid="uid://bdoysruwyu66d" path="res://props/fogel_cage.tscn" id="5_u6w55"]
 [ext_resource type="PackedScene" uid="uid://gan4jj2dddjo" path="res://props/table.tscn" id="6_ee3ra"]
 [ext_resource type="PackedScene" uid="uid://bxnbm1ln0gx1i" path="res://props/standbeeld.tscn" id="7_j7p0j"]
 [ext_resource type="PackedScene" uid="uid://cj6wmas6wwq64" path="res://props/Spider_web.tscn" id="8_egcqb"]
 [ext_resource type="PackedScene" uid="uid://cvlbl6rk2m2rc" path="res://props/fish_barrol.tscn" id="9_gqwxs"]
 [ext_resource type="PackedScene" uid="uid://dk33dbavh6a0x" path="res://props/Crate.tscn" id="10_k6ddw"]
 [ext_resource type="PackedScene" uid="uid://cl7gjeml8vq3m" path="res://props/Char.tscn" id="11_qwvhl"]
-[ext_resource type="PackedScene" path="res://props/spigel.tscn" id="12_8x1u4"]
+[ext_resource type="PackedScene" uid="uid://ce1fe4n34ajs0" path="res://props/spigel.tscn" id="12_8x1u4"]
 [ext_resource type="Texture2D" uid="uid://cald0dxvsgpci" path="res://art/props/vloerkleed rechthoek.png" id="13_kv04m"]
 [ext_resource type="Texture2D" uid="uid://dnammns7aufhs" path="res://art/props/tapijt rond.png" id="14_hv750"]
 [ext_resource type="Texture2D" uid="uid://cjbavb0kvdpfi" path="res://art/props/stairs.png" id="15_8wdn6"]
 [ext_resource type="PackedScene" uid="uid://duodbpt6jexph" path="res://player/player.tscn" id="16_2jxxq"]
-[ext_resource type="PackedScene" uid="uid://cgsp1wrabq4xk" path="res://props/key.tscn" id="17_4uus8"]
-[ext_resource type="PackedScene" uid="uid://bxilmc7wshs6y" path="res://player/touch.tscn" id="17_d6bxj"]
+[ext_resource type="PackedScene" path="res://props/key.tscn" id="17_4uus8"]
+[ext_resource type="PackedScene" path="res://player/touch.tscn" id="17_d6bxj"]
 [ext_resource type="AudioStream" uid="uid://c8xnf5q3t36tb" path="res://audio/ambiance.ogg" id="20_uqcpm"]
 [ext_resource type="PackedScene" uid="uid://bekn5bjglb0f5" path="res://props/dog_cage.tscn" id="21_15u1g"]
 [ext_resource type="Script" path="res://props/dog_cage.gd" id="21_wkmnd"]
@@ -398,6 +398,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1b53w")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ov2as"]
+size = Vector2(44, 33)
+
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_62ntc")
 
@@ -475,6 +478,14 @@ texture = ExtResource("14_hv750")
 position = Vector2(0, -28)
 texture = ExtResource("15_8wdn6")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -28)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_ov2as")
+
 [node name="Key" parent="." instance=ExtResource("17_4uus8")]
 position = Vector2(-312, -182)
 
@@ -512,6 +523,7 @@ unique_name_in_owner = true
 stream = ExtResource("20_uqcpm")
 volume_db = -15.0
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Player/Touch" to="." method="_on_touch_body_entered"]
 [connection signal="timeout" from="NarratorTimer" to="." method="_on_narrator_timer_timeout"]
 [connection signal="finished" from="Ambiance" to="." method="_on_ambiance_finished"]
