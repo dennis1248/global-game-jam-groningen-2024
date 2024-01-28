@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c6w31in5s5koj"]
+[gd_scene load_steps=26 format=3 uid="uid://c6w31in5s5koj"]
 
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_hf3ub"]
 [ext_resource type="Texture2D" uid="uid://bgu2qcf16b1ax" path="res://art/props/wcdeur.png" id="2_burjk"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dnammns7aufhs" path="res://art/props/tapijt rond.png" id="19_npx01"]
 [ext_resource type="Texture2D" uid="uid://cmdueo7aexuj" path="res://art/props/torch.tres" id="20_r51hv"]
 [ext_resource type="Texture2D" uid="uid://cyvjedipcxdy5" path="res://art/props/eindpoort.png" id="21_qcvtw"]
+[ext_resource type="PackedScene" uid="uid://b34hprofhpj7r" path="res://mobs/follower.tscn" id="22_x5joq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b53w"]
 texture = ExtResource("1_hf3ub")
@@ -398,7 +399,10 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1b53w")
 
-[node name="Level2" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36n3p"]
+size = Vector2(58, 80.5)
+
+[node name="Level3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." groups=["walls"]]
 position = Vector2(-27, -54)
@@ -521,5 +525,31 @@ texture = ExtResource("20_r51hv")
 position = Vector2(-27, -342)
 texture = ExtResource("21_qcvtw")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_fill5")]
+[node name="Player" parent="." instance=ExtResource("4_fill5")]
+unique_name_in_owner = true
 position = Vector2(-26, -128)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-27, -333.75)
+shape = SubResource("RectangleShape2D_36n3p")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+disable_3d = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+mode = 3
+item_count = 1
+item_0/text = "Hello"
+item_0/id = 0
+
+[node name="Follower" parent="." instance=ExtResource("22_x5joq")]
+position = Vector2(-63, -105)
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

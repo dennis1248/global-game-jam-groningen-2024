@@ -61,14 +61,14 @@ texture = ExtResource("2_2e1fp")
 hframes = 2
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2ixtd")
-disabled = true
-
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 10.0
 autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2ixtd")
+disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ip63g")

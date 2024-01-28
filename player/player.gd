@@ -19,3 +19,7 @@ func _physics_process(_delta):
 	velocity = direction * SPEED
 	
 	move_and_slide()
+
+func _on_area_2d_body_entered(body):
+	#$PopupMenu.popup_show(Rect2(50, 50, 100, 100)
+	print("works")
