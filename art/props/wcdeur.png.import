@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4gxnnpc7lov1"
-path="res://.godot/imported/DogCage.png-1a88f77425cfb74bb1962bedffdd4fbd.ctex"
+uid="uid://bgu2qcf16b1ax"
+path="res://.godot/imported/wcdeur.png-7da1954be5f21c552ed4d489ca8bb90c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/props/DogCage.png"
-dest_files=["res://.godot/imported/DogCage.png-1a88f77425cfb74bb1962bedffdd4fbd.ctex"]
+source_file="res://art/props/wcdeur.png"
+dest_files=["res://.godot/imported/wcdeur.png-7da1954be5f21c552ed4d489ca8bb90c.ctex"]
 
 [params]
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c60emqs7p6728"]
+
+[ext_resource type="Texture2D" uid="uid://b4gxnnpc7lov1" path="res://art/props/DogCage.png" id="1_f8nrb"]
+
+[sub_resource type="Animation" id="Animation_fwssp"]
+resource_name = "dog_idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78b84"]
+_data = {
+"dog_idle": SubResource("Animation_fwssp")
+}
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_f8nrb")
+hframes = 4
+vframes = 2
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_78b84")
+}
