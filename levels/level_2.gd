@@ -25,9 +25,10 @@ func _on_touch_body_entered(body):
 		var new_dog = preload("res://mobs/follower.tscn").instantiate()
 		new_dog.global_position = dog_cage_pos
 		add_child(new_dog)
+		narrator_response = "dog_saved"
+		%NarratorTimer.start()
 
 func _on_narrator_timer_timeout():
-	print("AAAA")
 	if narrator_response == "intro":
 		%NarratorAudioplayer.stream = load("res://audio/narrator/level_2_intro.mp3")
 		%NarratorAudioplayer.play()
@@ -45,7 +46,7 @@ func _on_narrator_timer_timeout():
 		%NarratorAudioplayer.play()
 
 	if narrator_response == "dog_saved":
-		%NarratorAudioplayer.stream = load("res://audio/narrator/level_2_dog_saved.mp3")
+		%NarratorAudioplayer.stream = load("res://audio/narrator/level_2_dogfree.mp3")
 		%NarratorAudioplayer.play()
 	
 	narrator_response = ""
