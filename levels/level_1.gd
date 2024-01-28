@@ -6,9 +6,6 @@ var pressed_button: int = 0
 var narrator_response: String = ""
 var narrator_lock: bool = false
 
-func _process(delta):
-	pass
-
 func _input(event):
 	if event.is_action_pressed("escape"):
 		get_tree().change_scene_to_file("res://menu/main.tscn")

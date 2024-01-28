@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6w31in5s5koj"]
+[gd_scene load_steps=28 format=3 uid="uid://c6w31in5s5koj"]
 
+[ext_resource type="Script" path="res://levels/level_3.gd" id="1_b51lx"]
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_hf3ub"]
 [ext_resource type="Texture2D" uid="uid://bgu2qcf16b1ax" path="res://art/props/wcdeur.png" id="2_burjk"]
 [ext_resource type="Texture2D" uid="uid://brkm8nb7u8ion" path="res://art/props/wcscene2.png" id="3_lnx1y"]
@@ -9,14 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cly8opw6elx7h" path="res://props/boeken_kast_2.tscn" id="7_fahu0"]
 [ext_resource type="PackedScene" uid="uid://dnuuskcgdym5b" path="res://props/boeken_kast_3.tscn" id="8_4eoyv"]
 [ext_resource type="PackedScene" uid="uid://0bpwte814b1r" path="res://props/boeken_kast_4.tscn" id="9_yen1a"]
-[ext_resource type="PackedScene" uid="uid://ypbunar1g3jl" path="res://props/boeken_kast3.tscn" id="10_nj66r"]
-[ext_resource type="PackedScene" uid="uid://b4qfp7n16va8d" path="res://props/boeken_kast2.tscn" id="11_7slpt"]
+[ext_resource type="PackedScene" path="res://props/boeken_kast3.tscn" id="10_nj66r"]
+[ext_resource type="PackedScene" path="res://props/boeken_kast2.tscn" id="11_7slpt"]
 [ext_resource type="Texture2D" uid="uid://cfqyppchjvt3t" path="res://art/props/prinses.png" id="12_sli1d"]
 [ext_resource type="PackedScene" uid="uid://cj6wmas6wwq64" path="res://props/Spider_web.tscn" id="13_tokug"]
-[ext_resource type="PackedScene" uid="uid://ce1fe4n34ajs0" path="res://props/spigel.tscn" id="14_buovy"]
+[ext_resource type="PackedScene" path="res://props/spigel.tscn" id="14_buovy"]
 [ext_resource type="PackedScene" uid="uid://cvlbl6rk2m2rc" path="res://props/fish_barrol.tscn" id="15_6tj1d"]
 [ext_resource type="PackedScene" uid="uid://dk33dbavh6a0x" path="res://props/Crate.tscn" id="16_bejwy"]
-[ext_resource type="PackedScene" uid="uid://bdoysruwyu66d" path="res://props/fogel_cage.tscn" id="17_w52q8"]
+[ext_resource type="PackedScene" path="res://props/fogel_cage.tscn" id="17_w52q8"]
 [ext_resource type="Texture2D" uid="uid://cald0dxvsgpci" path="res://art/props/vloerkleed rechthoek.png" id="18_m210x"]
 [ext_resource type="Texture2D" uid="uid://dnammns7aufhs" path="res://art/props/tapijt rond.png" id="19_npx01"]
 [ext_resource type="Texture2D" uid="uid://cmdueo7aexuj" path="res://art/props/torch.tres" id="20_r51hv"]
@@ -404,6 +405,7 @@ sources/0 = SubResource("TileSetAtlasSource_1b53w")
 size = Vector2(58, 65)
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_b51lx")
 
 [node name="TileMap" type="TileMap" parent="." groups=["walls"]]
 position = Vector2(-27, -54)
