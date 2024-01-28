@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdoysruwyu66d"]
+
+[ext_resource type="Texture2D" uid="uid://ddhsdcddmxq3m" path="res://art/props/cage fogel.png" id="1_8a6qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7v5q"]
+size = Vector2(20, 62)
+
+[node name="FogelCage" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_t7v5q")
+
+[node name="CageFogel" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_8a6qi")

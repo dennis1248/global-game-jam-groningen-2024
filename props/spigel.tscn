@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce1fe4n34ajs0"]
+
+[ext_resource type="Texture2D" uid="uid://ds7jhb0506skh" path="res://art/props/spiegel.png" id="1_32ias"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4v65"]
+size = Vector2(24, 51)
+
+[node name="Spigel" type="StaticBody2D"]
+
+[node name="Spiegel" type="Sprite2D" parent="."]
+position = Vector2(0, -26)
+texture = ExtResource("1_32ias")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24.5)
+shape = SubResource("RectangleShape2D_w4v65")

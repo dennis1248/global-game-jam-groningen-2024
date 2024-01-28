@@ -6,6 +6,7 @@
 size = Vector2(26, 11)
 
 [node name="Standbeeld" type="StaticBody2D"]
+y_sort_enabled = true
 
 [node name="Standbeeld" type="Sprite2D" parent="."]
 position = Vector2(-2, -33)
