@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bkne6buo5082c"]
+[gd_scene load_steps=28 format=3 uid="uid://bkne6buo5082c"]
 
 [ext_resource type="Texture2D" uid="uid://ba3kt8mhv647g" path="res://art/tilemap/dungeon_1.png" id="1_ajkkg"]
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_mg2gs"]
@@ -21,6 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://bdoysruwyu66d" path="res://props/fogel_cage.tscn" id="19_ldtvv"]
 [ext_resource type="Texture2D" uid="uid://cfqyppchjvt3t" path="res://art/props/prinses.png" id="20_hiw67"]
 [ext_resource type="PackedScene" uid="uid://c4sxrpvfju541" path="res://props/cat_idle.tscn" id="21_83p85"]
+[ext_resource type="Texture2D" uid="uid://cald0dxvsgpci" path="res://art/props/vloerkleed rechthoek.png" id="22_h3pm8"]
+[ext_resource type="Texture2D" uid="uid://dnammns7aufhs" path="res://art/props/tapijt rond.png" id="23_y6bb0"]
+[ext_resource type="PackedScene" uid="uid://ce1fe4n34ajs0" path="res://props/spigel.tscn" id="24_1odb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndb36"]
 texture = ExtResource("1_ajkkg")
@@ -357,11 +360,8 @@ position = Vector2(66, -139)
 [node name="FogelCage" parent="." instance=ExtResource("19_ldtvv")]
 position = Vector2(-210, 222)
 
-[node name="Player" parent="." instance=ExtResource("5_ft541")]
-position = Vector2(-32, 211)
-
 [node name="Prinses" type="Sprite2D" parent="."]
-position = Vector2(-51, -149)
+position = Vector2(-48, -149)
 texture = ExtResource("20_hiw67")
 
 [node name="BoekenKast4" parent="." instance=ExtResource("14_x88o3")]
@@ -377,6 +377,30 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ladder"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_r7cs0")
+
+[node name="Table2" parent="." instance=ExtResource("16_af7h5")]
+position = Vector2(107, -60)
+
+[node name="VloerkleedRechthoek" type="Sprite2D" parent="."]
+position = Vector2(-153, -46)
+texture = ExtResource("22_h3pm8")
+
+[node name="TapijtRond" type="Sprite2D" parent="."]
+position = Vector2(122, 217)
+texture = ExtResource("23_y6bb0")
+
+[node name="Char2" parent="." instance=ExtResource("15_tb5pj")]
+position = Vector2(122, 202)
+scale = Vector2(0.7, 0.7)
+
+[node name="Table3" parent="." instance=ExtResource("16_af7h5")]
+position = Vector2(122, 226)
+
+[node name="Spigel" parent="." instance=ExtResource("24_1odb8")]
+position = Vector2(14, -122)
+
+[node name="Player" parent="." instance=ExtResource("5_ft541")]
+position = Vector2(-32, 211)
 
 [connection signal="body_entered" from="PianoButton" to="." method="_on_piano_button_body_entered"]
 [connection signal="body_entered" from="PianoButton2" to="." method="_on_piano_button_2_body_entered"]
