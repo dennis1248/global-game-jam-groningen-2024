@@ -33,8 +33,6 @@ func _on_position_timeout():
 	
 	positions.append(player.position.x) 
 	
-	print(positions)
-	
 	if len(positions) > 1:
 		if positions[0] > positions[1] or positions[0] < positions[1]:
 			$AnimationPlayer.play("dog_walk")

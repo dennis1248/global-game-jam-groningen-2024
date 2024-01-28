@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgsp1wrabq4xk"]
+
+[ext_resource type="Texture2D" uid="uid://cxncvhy1kwj6w" path="res://art/props/Key.png" id="1_6dqgt"]
+[ext_resource type="Script" path="res://props/key.gd" id="1_nusqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb4um"]
+
+[node name="Key" type="StaticBody2D"]
+script = ExtResource("1_nusqv")
+
+[node name="Key" type="Sprite2D" parent="."]
+texture = ExtResource("1_6dqgt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yb4um")
